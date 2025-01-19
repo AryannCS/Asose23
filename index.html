@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn French</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0077b6, #023e8a);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #023e8a;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #0077b6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .course {
+            background: #fff;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #023e8a;
+            color: #fff;
+            margin-top: 2rem;
+            animation: slideInUp 2s;
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #0077b6;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #023e8a;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn French Online</h1>
+        <p>Your journey to mastering French starts here!</p>
+    </header>
+
+    <div class="hero-image"></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="container">
+        <h2>Welcome</h2>
+        <p>Bonjour! Welcome to our French learning website. Whether you are a beginner or looking to refine your skills, we have something for everyone. Start exploring today!</p>
+    </section>
+
+    <section id="courses" class="container">
+        <h2>Courses</h2>
+
+         <h3>Beginner French</h3>
+        
+        <div class="course">
+            <h4>Basic vocabulary</h4>
+            <a href="https://sites.google.com/view/beginner-french/basic-vocabulary?authuser=0" target="_blank" style="color: #0077b6; text-decoration: underline; title= ">Basic Vocabulary</a>
+        </div>
+
+        <div class="course">
+            <h4>Simple grammar</h4>
+            <a href="https://sites.google.com/view/beginner-french/simple-grammer?authuser=0" target="_blank" style="color: #0077b6; text-decoration: underline;">Simple Grammar</a>
+        </div>
+        
+        <div class="course">
+            <h4>Essential phrases</h4>
+            <a href="https://sites.google.com/view/beginner-french/essential-phrases?authuser=0" target="_blank" style="color: #0077b6; text-decoration: underline;">Essential Phrases</a>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formResponse" style="color: green; display: none;">Thank you for your message! We'll get back to you soon.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Learn French Online. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Simulate form submission
+            const formResponse = document.getElementById('formResponse');
+            formResponse.style.display = 'block';
+
+            // Clear the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
